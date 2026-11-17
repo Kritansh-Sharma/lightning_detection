@@ -1,0 +1,22 @@
+{
+  "name": "bhu-drishti",
+  "version": "1.0.0",
+  "description": "Crowdsourced Ground-Truthing & Validation Pipeline for ISRO LULC Models (ORBITRON PS-24)",
+  "scripts": {
+    "dev": "python -m uvicorn server:app --reload --host 0.0.0.0 --port 8000",
+    "start": "python server.py",
+    "seed": "python seed_data.py",
+    "test": "python test_pipeline.py"
+  },
+  "keywords": [
+    "isro",
+    "bhuvan",
+    "lulc",
+    "ground-truth",
+    "geospatial",
+    "fastapi",
+    "leaflet"
+  ],
+  "author": "Team Bhu-Drishti",
+  "license": "MIT"
+}

@@ -1,0 +1,2772 @@
+{
+  "type": "FeatureCollection",
+  "name": "Bhu-Drishti Ground Truth Dataset",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.865432,
+          30.912345
+        ]
+      },
+      "properties": {
+        "id": "92f81080-bb8a-4c60-88a1-4c09aa881c39",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 2.5,
+        "blur_score": 266.86,
+        "brightness": 131.33,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Optimal daylight Kharif paddy survey",
+        "compass_heading": 0.0,
+        "altitude": 0.0,
+        "timestamp": "2026-10-18T16:02:23Z",
+        "image_filename": "02b1f229961a41318d20d5cdcb85e21b.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.854321,
+          30.901234
+        ]
+      },
+      "properties": {
+        "id": "3b97d258-8638-4fa0-9d0f-62e823d3f504",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 3.8,
+        "blur_score": 9442.84,
+        "brightness": 14.1,
+        "quality_status": "failed_brightness",
+        "verification_status": "pending",
+        "surveyor_id": "Cadet_Tester",
+        "notes": "Punjab wheat field real-time test",
+        "compass_heading": 0.0,
+        "altitude": 0.0,
+        "timestamp": "2026-10-18T15:43:26Z",
+        "image_filename": "9852bb4b5d044990b4797ee8926834f2.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.212782,
+          28.608617
+        ]
+      },
+      "properties": {
+        "id": "9d665b50-ffd2-4f24-be8b-4d61712528fe",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.4,
+        "blur_score": 341.17,
+        "brightness": 70.61,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Commercial market, Connaught Place vicinity",
+        "compass_heading": 302.2,
+        "altitude": 228.4,
+        "timestamp": "2026-10-18T09:14:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.885961,
+          21.940325
+        ]
+      },
+      "properties": {
+        "id": "655d4759-30a7-426d-b13e-707a13344ca3",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 2.9,
+        "blur_score": 145.98,
+        "brightness": 70.92,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Estuarine channel, turbid monsoon flow",
+        "compass_heading": 78.4,
+        "altitude": 3.5,
+        "timestamp": "2026-10-18T06:25:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.599711,
+          12.968587
+        ]
+      },
+      "properties": {
+        "id": "4a60405c-71ee-4694-8a42-5dcb8c1fc270",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.2,
+        "blur_score": 347.8,
+        "brightness": 118.44,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Residential layout, HSR Layout",
+        "compass_heading": 169.8,
+        "altitude": 912.6,
+        "timestamp": "2026-10-17T23:56:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.595135,
+          12.982894
+        ]
+      },
+      "properties": {
+        "id": "8521eb51-a3a4-4efb-86d2-8be76883e13f",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 8.3,
+        "blur_score": 362.08,
+        "brightness": 154.78,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Arjun_Nair",
+        "notes": "Lake encroachment, Bellandur edge",
+        "compass_heading": 346.4,
+        "altitude": 908.9,
+        "timestamp": "2026-10-17T21:28:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.768605,
+          29.544873
+        ]
+      },
+      "properties": {
+        "id": "f75538c7-4888-45e4-a249-6d0c9f6e75f1",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 5.4,
+        "blur_score": 298.36,
+        "brightness": 118.06,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Mixed conifer-broadleaf transition",
+        "compass_heading": 15.4,
+        "altitude": 574.6,
+        "timestamp": "2026-10-17T08:59:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.902572,
+          26.907893
+        ]
+      },
+      "properties": {
+        "id": "72aebbff-c201-4e3d-a26a-9c993e5b77ef",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 2.5,
+        "blur_score": 371.15,
+        "brightness": 117.53,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Meera_Joshi",
+        "notes": "Fallow grazing land, seasonal",
+        "compass_heading": 195.9,
+        "altitude": 92.5,
+        "timestamp": "2026-10-17T07:11:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.589063,
+          12.971759
+        ]
+      },
+      "properties": {
+        "id": "881615cd-d2ff-4349-9111-b4baa95de341",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 8.8,
+        "blur_score": 223.51,
+        "brightness": 138.79,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Lake encroachment, Bellandur edge",
+        "compass_heading": 289.5,
+        "altitude": 922.5,
+        "timestamp": "2026-10-17T06:52:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.220899,
+          28.608863
+        ]
+      },
+      "properties": {
+        "id": "28fd069e-dbcb-40fb-bb67-0417ab46d2a1",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 4.8,
+        "blur_score": 312.65,
+        "brightness": 119.35,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Metro construction corridor",
+        "compass_heading": 335.7,
+        "altitude": 213.2,
+        "timestamp": "2026-10-17T02:27:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.887911,
+          21.935199
+        ]
+      },
+      "properties": {
+        "id": "4bce9478-7e16-4399-b87e-a64a44b9b5ef",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 3.3,
+        "blur_score": 198.48,
+        "brightness": 152.24,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Estuarine channel, turbid monsoon flow",
+        "compass_heading": 247.3,
+        "altitude": 3.8,
+        "timestamp": "2026-10-17T02:07:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.880221,
+          19.069056
+        ]
+      },
+      "properties": {
+        "id": "6022e191-c8cf-4dca-9866-6f4db7dcb171",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.4,
+        "blur_score": 118.52,
+        "brightness": 70.02,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Rohan_Patel",
+        "notes": "Highrise cluster, Bandra-Kurla Complex",
+        "compass_heading": 138.5,
+        "altitude": 7.4,
+        "timestamp": "2026-10-16T23:17:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.779078,
+          26.151096
+        ]
+      },
+      "properties": {
+        "id": "6aa03432-a054-44bc-bd92-69f7913c7b67",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 5.5,
+        "blur_score": 241.76,
+        "brightness": 188.77,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NCC_Cadet_Raj",
+        "notes": "Tea gardens, Assam second flush",
+        "compass_heading": 128.9,
+        "altitude": 63.8,
+        "timestamp": "2026-10-16T07:36:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.595918,
+          12.969322
+        ]
+      },
+      "properties": {
+        "id": "36484b10-27f5-4eff-96de-434b3b8ac1b5",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 7.0,
+        "blur_score": 216.21,
+        "brightness": 117.33,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Lake encroachment, Bellandur edge",
+        "compass_heading": 46.5,
+        "altitude": 928.6,
+        "timestamp": "2026-10-16T07:02:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.861435,
+          29.961744
+        ]
+      },
+      "properties": {
+        "id": "4f600b0e-a9b4-4258-a8f0-92a6ae8dc052",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 9.1,
+        "blur_score": 123.03,
+        "brightness": 111.94,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Mustard in bloom",
+        "compass_heading": 57.6,
+        "altitude": 246.5,
+        "timestamp": "2026-10-16T05:50:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.220383,
+          10.513146
+        ]
+      },
+      "properties": {
+        "id": "76e49942-8719-42d5-8371-b53a16fe0fff",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 5.3,
+        "blur_score": 356.43,
+        "brightness": 147.03,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Dense tropical evergreen canopy",
+        "compass_heading": 354.0,
+        "altitude": 468.2,
+        "timestamp": "2026-10-15T23:41:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.869741,
+          23.72796
+        ]
+      },
+      "properties": {
+        "id": "fd7c7077-2685-4268-ad78-55626925ad01",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 6.1,
+        "blur_score": 334.13,
+        "brightness": 174.63,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Sneha_Iyer",
+        "notes": "Sparse halophyte scrub",
+        "compass_heading": 97.6,
+        "altitude": 15.5,
+        "timestamp": "2026-10-15T02:17:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.854341,
+          34.076293
+        ]
+      },
+      "properties": {
+        "id": "08166e34-3d42-4f73-a2c9-26d8c6185a1a",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 8.1,
+        "blur_score": 279.56,
+        "brightness": 79.19,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Floating vegetable garden (rad)",
+        "compass_heading": 247.7,
+        "altitude": 1589.9,
+        "timestamp": "2026-10-15T01:54:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.849903,
+          30.906004
+        ]
+      },
+      "properties": {
+        "id": "4c6610aa-e705-49ba-b317-10df16eed8ce",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 8.4,
+        "blur_score": 134.93,
+        "brightness": 90.77,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Rabi wheat crop, 45 days old",
+        "compass_heading": 317.6,
+        "altitude": 246.0,
+        "timestamp": "2026-10-15T01:09:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.886307,
+          19.076315
+        ]
+      },
+      "properties": {
+        "id": "57aa1c06-602f-4e29-941a-9e5f0266f533",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 7.1,
+        "blur_score": 288.11,
+        "brightness": 179.26,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Slum redevelopment zone",
+        "compass_heading": 273.1,
+        "altitude": 6.7,
+        "timestamp": "2026-10-14T23:20:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.588921,
+          34.15284
+        ]
+      },
+      "properties": {
+        "id": "c8a32da6-0c7c-4b31-b24e-285a46c20846",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 8.7,
+        "blur_score": 279.41,
+        "brightness": 184.24,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Cold desert moraine, Ladakh",
+        "compass_heading": 161.8,
+        "altitude": 3668.0,
+        "timestamp": "2026-10-14T09:19:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.841379,
+          30.909926
+        ]
+      },
+      "properties": {
+        "id": "0a45565b-5f9b-41e4-9e98-5e41774224fe",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 5.2,
+        "blur_score": 306.71,
+        "brightness": 142.54,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Paddy harvested, straw visible",
+        "compass_heading": 195.5,
+        "altitude": 256.1,
+        "timestamp": "2026-10-13T04:03:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.889672,
+          19.075406
+        ]
+      },
+      "properties": {
+        "id": "29db3fb5-5ffc-4db1-8fce-7c57e548281a",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 7.0,
+        "blur_score": 184.77,
+        "brightness": 142.0,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Highrise cluster, Bandra-Kurla Complex",
+        "compass_heading": 347.3,
+        "altitude": 22.6,
+        "timestamp": "2026-10-13T02:28:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.594613,
+          34.15124
+        ]
+      },
+      "properties": {
+        "id": "2decd36b-e073-419c-93e3-c3a91fada2d7",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 4.7,
+        "blur_score": 227.27,
+        "brightness": 171.28,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Arjun_Nair",
+        "notes": "Cold desert moraine, Ladakh",
+        "compass_heading": 195.0,
+        "altitude": 3502.9,
+        "timestamp": "2026-10-12T22:45:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.784177,
+          26.145824
+        ]
+      },
+      "properties": {
+        "id": "c6012112-05b3-4f2c-89b1-1a05d1bee4d2",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 9.4,
+        "blur_score": 187.0,
+        "brightness": 166.52,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Tea gardens, Assam second flush",
+        "compass_heading": 42.3,
+        "altitude": 87.8,
+        "timestamp": "2026-10-12T08:15:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.830101,
+          34.10493
+        ]
+      },
+      "properties": {
+        "id": "72d4e4e6-15ef-4b7b-8d4e-e47d05a34b54",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 5.3,
+        "blur_score": 241.12,
+        "brightness": 171.59,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Dal Lake, shikara zone",
+        "compass_heading": 81.3,
+        "altitude": 1599.3,
+        "timestamp": "2026-10-12T04:40:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.773661,
+          20.926519
+        ]
+      },
+      "properties": {
+        "id": "ceb1a779-94e8-4c60-b56f-f4be0d20fef3",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 7.4,
+        "blur_score": 303.74,
+        "brightness": 83.45,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Cotton bolls ready for picking",
+        "compass_heading": 321.0,
+        "altitude": 306.2,
+        "timestamp": "2026-10-12T03:21:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.221569,
+          28.612696
+        ]
+      },
+      "properties": {
+        "id": "c1fed3e5-e509-4e6d-8d90-a60b93c850c4",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.7,
+        "blur_score": 127.01,
+        "brightness": 107.16,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Meera_Joshi",
+        "notes": "Multi-storey residential, South Delhi",
+        "compass_heading": 30.1,
+        "altitude": 213.8,
+        "timestamp": "2026-10-12T02:33:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.758124,
+          26.151744
+        ]
+      },
+      "properties": {
+        "id": "48e23098-e837-49aa-9bb5-476ad856c9c2",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 8.1,
+        "blur_score": 189.6,
+        "brightness": 150.58,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Tea gardens, Assam second flush",
+        "compass_heading": 198.6,
+        "altitude": 70.2,
+        "timestamp": "2026-10-12T01:15:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.83677,
+          30.898323
+        ]
+      },
+      "properties": {
+        "id": "3698c562-1b27-4c18-ad23-55fb878c7f5a",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 6.2,
+        "blur_score": 136.47,
+        "brightness": 72.5,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Rohan_Patel",
+        "notes": "Paddy harvested, straw visible",
+        "compass_heading": 105.9,
+        "altitude": 232.5,
+        "timestamp": "2026-10-10T08:01:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.757481,
+          29.516699
+        ]
+      },
+      "properties": {
+        "id": "3f424648-95e1-447e-a8a9-bc8a08fe94cb",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 5.7,
+        "blur_score": 362.98,
+        "brightness": 129.11,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Sal forest, Jim Corbett buffer zone",
+        "compass_heading": 183.8,
+        "altitude": 519.4,
+        "timestamp": "2026-10-10T07:07:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.198675,
+          10.50731
+        ]
+      },
+      "properties": {
+        "id": "62abc5d8-1188-4c2b-a088-b6d8d9e21266",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 3.9,
+        "blur_score": 129.15,
+        "brightness": 152.51,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Mixed deciduous, bamboo understory",
+        "compass_heading": 25.6,
+        "altitude": 414.6,
+        "timestamp": "2026-10-10T01:51:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.568804,
+          34.164939
+        ]
+      },
+      "properties": {
+        "id": "afe4bf41-8e42-4309-ad6f-e70b94d47771",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 2.6,
+        "blur_score": 185.94,
+        "brightness": 133.14,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Rocky barren slope, altitude >3500m",
+        "compass_heading": 80.3,
+        "altitude": 3708.8,
+        "timestamp": "2026-10-10T01:26:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.846499,
+          23.729361
+        ]
+      },
+      "properties": {
+        "id": "fdcca794-7d86-42b5-9aab-55d37a0bd247",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 8.6,
+        "blur_score": 203.49,
+        "brightness": 186.44,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Rann of Kutch salt flat, white crust",
+        "compass_heading": 151.0,
+        "altitude": 9.1,
+        "timestamp": "2026-10-10T01:21:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.873788,
+          19.081895
+        ]
+      },
+      "properties": {
+        "id": "469b2bf8-6d3d-4706-9cf0-82d4e6c1ac47",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 9.2,
+        "blur_score": 112.42,
+        "brightness": 160.93,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Coastal road construction",
+        "compass_heading": 27.1,
+        "altitude": 11.1,
+        "timestamp": "2026-10-09T21:45:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.854311,
+          34.081427
+        ]
+      },
+      "properties": {
+        "id": "9fd800d5-651b-49d2-b844-62174f0fcccc",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 6.2,
+        "blur_score": 279.43,
+        "brightness": 97.32,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Dal Lake, shikara zone",
+        "compass_heading": 244.6,
+        "altitude": 1585.3,
+        "timestamp": "2026-10-09T07:18:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.91458,
+          26.912699
+        ]
+      },
+      "properties": {
+        "id": "b18cff9a-d7a4-40fe-852a-a7338c8f459f",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.0,
+        "blur_score": 305.96,
+        "brightness": 109.19,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Vikram_Singh",
+        "notes": "Sandy desert, sparse scrub",
+        "compass_heading": 359.9,
+        "altitude": 124.1,
+        "timestamp": "2026-10-09T01:58:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.215005,
+          10.519925
+        ]
+      },
+      "properties": {
+        "id": "d1e21770-f1e8-4f31-801e-3cebb7065cf0",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 8.8,
+        "blur_score": 292.12,
+        "brightness": 116.68,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Teak plantation, 15-yr growth",
+        "compass_heading": 12.6,
+        "altitude": 273.0,
+        "timestamp": "2026-10-09T00:30:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.580349,
+          12.961412
+        ]
+      },
+      "properties": {
+        "id": "23d3b353-a730-46c9-8bfa-3cfb3d7a9d24",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.9,
+        "blur_score": 145.8,
+        "brightness": 70.44,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Residential layout, HSR Layout",
+        "compass_heading": 135.9,
+        "altitude": 891.6,
+        "timestamp": "2026-10-08T01:42:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.891369,
+          26.907184
+        ]
+      },
+      "properties": {
+        "id": "95a565c9-0e7f-4f85-a65c-4f39fbfe3ac7",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 6.4,
+        "blur_score": 230.4,
+        "brightness": 74.15,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Sandy desert, sparse scrub",
+        "compass_heading": 8.8,
+        "altitude": 106.4,
+        "timestamp": "2026-10-07T07:05:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.755217,
+          26.130687
+        ]
+      },
+      "properties": {
+        "id": "c1609278-3f7f-44e1-ae46-9e1c611fd7c2",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 2.9,
+        "blur_score": 165.08,
+        "brightness": 163.94,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Rice paddy, flooded field",
+        "compass_heading": 359.5,
+        "altitude": 87.1,
+        "timestamp": "2026-10-07T05:38:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.768825,
+          29.529944
+        ]
+      },
+      "properties": {
+        "id": "9f2fa3c3-939d-4b7d-837a-83b61e184930",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 5.1,
+        "blur_score": 247.98,
+        "brightness": 112.64,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Mixed conifer-broadleaf transition",
+        "compass_heading": 19.5,
+        "altitude": 431.8,
+        "timestamp": "2026-10-07T05:34:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.832035,
+          34.091247
+        ]
+      },
+      "properties": {
+        "id": "77794410-0b16-4b23-9a0b-499df423e356",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 9.0,
+        "blur_score": 224.53,
+        "brightness": 90.99,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Vikram_Singh",
+        "notes": "Lakeside marsh, winter migratory birds",
+        "compass_heading": 209.9,
+        "altitude": 1588.0,
+        "timestamp": "2026-10-06T23:22:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.865485,
+          29.965747
+        ]
+      },
+      "properties": {
+        "id": "11a1c41b-3a66-48d4-bd1c-3aac2e8d65df",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 6.4,
+        "blur_score": 302.65,
+        "brightness": 86.44,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Meera_Joshi",
+        "notes": "Basmati rice paddy, knee-high",
+        "compass_heading": 26.0,
+        "altitude": 238.2,
+        "timestamp": "2026-10-06T22:29:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.694894,
+          11.39487
+        ]
+      },
+      "properties": {
+        "id": "6bbdde0f-56ab-4cd3-a40b-1959df45e94e",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 6.5,
+        "blur_score": 236.89,
+        "brightness": 176.72,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Shola grassland-forest mosaic",
+        "compass_heading": 317.1,
+        "altitude": 2072.6,
+        "timestamp": "2026-10-06T05:12:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.858555,
+          29.948783
+        ]
+      },
+      "properties": {
+        "id": "6e11bd2f-2e72-4faf-99a8-c256e2b28610",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 3.7,
+        "blur_score": 135.16,
+        "brightness": 127.7,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Sugarcane plantation",
+        "compass_heading": 78.3,
+        "altitude": 245.8,
+        "timestamp": "2026-10-05T20:44:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.878904,
+          19.079795
+        ]
+      },
+      "properties": {
+        "id": "9a9c94ea-c0a6-4ece-aba3-542b46e66886",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 9.1,
+        "blur_score": 369.12,
+        "brightness": 152.46,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NCC_Cadet_Raj",
+        "notes": "Highrise cluster, Bandra-Kurla Complex",
+        "compass_heading": 148.7,
+        "altitude": 15.7,
+        "timestamp": "2026-10-05T08:34:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.869565,
+          23.734171
+        ]
+      },
+      "properties": {
+        "id": "3220ee7c-39d6-4d2e-b8f6-86afa6396d0b",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.3,
+        "blur_score": 342.23,
+        "brightness": 90.01,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Rann of Kutch salt flat, white crust",
+        "compass_heading": 73.7,
+        "altitude": 9.3,
+        "timestamp": "2026-10-05T00:16:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.854337,
+          30.911873
+        ]
+      },
+      "properties": {
+        "id": "01c7faf7-5bb3-4780-a036-7884fd1f8278",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 3.1,
+        "blur_score": 131.5,
+        "brightness": 71.11,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Wheat stubble field",
+        "compass_heading": 86.0,
+        "altitude": 227.3,
+        "timestamp": "2026-10-04T08:06:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.575112,
+          34.15941
+        ]
+      },
+      "properties": {
+        "id": "f6787df8-f830-4c00-adc3-1aac388ac8f6",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 5.4,
+        "blur_score": 205.18,
+        "brightness": 118.29,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Glacial outwash plain, no vegetation",
+        "compass_heading": 246.0,
+        "altitude": 3864.4,
+        "timestamp": "2026-10-04T00:01:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.874554,
+          19.072371
+        ]
+      },
+      "properties": {
+        "id": "739ad4f1-4326-4564-bdae-6ddc8802dd7e",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.5,
+        "blur_score": 305.44,
+        "brightness": 117.24,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Highrise cluster, Bandra-Kurla Complex",
+        "compass_heading": 307.8,
+        "altitude": 20.7,
+        "timestamp": "2026-10-03T04:54:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.579601,
+          34.15384
+        ]
+      },
+      "properties": {
+        "id": "1e5232a8-43ba-42b2-b3c1-de25544f1bcf",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 8.8,
+        "blur_score": 226.02,
+        "brightness": 92.24,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Cold desert moraine, Ladakh",
+        "compass_heading": 138.5,
+        "altitude": 3809.6,
+        "timestamp": "2026-10-02T01:22:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.767896,
+          20.938579
+        ]
+      },
+      "properties": {
+        "id": "f912c9d4-8f48-49c0-84a8-997562c3bb08",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 5.6,
+        "blur_score": 181.38,
+        "brightness": 172.04,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Cotton bolls ready for picking",
+        "compass_heading": 231.0,
+        "altitude": 319.7,
+        "timestamp": "2026-10-02T00:10:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.851816,
+          34.085192
+        ]
+      },
+      "properties": {
+        "id": "14868886-5221-4213-8def-74396cc4e1ab",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 4.6,
+        "blur_score": 295.44,
+        "brightness": 186.69,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Dal Lake, shikara zone",
+        "compass_heading": 223.5,
+        "altitude": 1584.2,
+        "timestamp": "2026-10-01T22:11:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.219741,
+          28.624073
+        ]
+      },
+      "properties": {
+        "id": "fc433b26-6ced-4656-8fd8-4996089ae27c",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 5.2,
+        "blur_score": 110.81,
+        "brightness": 188.11,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NCC_Cadet_Raj",
+        "notes": "Multi-storey residential, South Delhi",
+        "compass_heading": 192.2,
+        "altitude": 229.0,
+        "timestamp": "2026-10-01T21:47:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.597833,
+          12.974309
+        ]
+      },
+      "properties": {
+        "id": "5374fdaf-9aef-4ca6-ae2b-dde13c5bd9e0",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 4.7,
+        "blur_score": 162.03,
+        "brightness": 159.07,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Vikram_Singh",
+        "notes": "Lake encroachment, Bellandur edge",
+        "compass_heading": 95.1,
+        "altitude": 899.5,
+        "timestamp": "2026-10-01T06:13:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.594448,
+          34.157237
+        ]
+      },
+      "properties": {
+        "id": "409767a6-30ab-4242-a068-e8d1a09e4b5a",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.2,
+        "blur_score": 256.75,
+        "brightness": 153.02,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Glacial outwash plain, no vegetation",
+        "compass_heading": 194.9,
+        "altitude": 3753.7,
+        "timestamp": "2026-10-01T00:01:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.874305,
+          29.973797
+        ]
+      },
+      "properties": {
+        "id": "77ff77ec-42bb-41e6-b13b-fd973b73ef74",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 7.7,
+        "blur_score": 126.26,
+        "brightness": 108.89,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Mustard in bloom",
+        "compass_heading": 276.4,
+        "altitude": 235.9,
+        "timestamp": "2026-09-30T22:05:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.330724,
+          19.722901
+        ]
+      },
+      "properties": {
+        "id": "e5fb9da0-5311-41f0-9185-3a4ac9e892b1",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 8.2,
+        "blur_score": 175.43,
+        "brightness": 142.3,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Chilika Lake, brackish water, clear",
+        "compass_heading": 268.8,
+        "altitude": 3.6,
+        "timestamp": "2026-09-30T09:14:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.312576,
+          19.715648
+        ]
+      },
+      "properties": {
+        "id": "c6fe018b-ac46-47ee-9efd-fd4a35a47e3d",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 5.9,
+        "blur_score": 179.29,
+        "brightness": 141.2,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "AgriStudent_Mohan",
+        "notes": "Mudflat edge with flamingos visible",
+        "compass_heading": 57.7,
+        "altitude": 4.2,
+        "timestamp": "2026-09-30T06:29:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.767478,
+          20.943025
+        ]
+      },
+      "properties": {
+        "id": "86cf9ea8-ece4-412b-92e0-7a3d0708473e",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 2.2,
+        "blur_score": 347.06,
+        "brightness": 127.04,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Orange orchards, Nagpur belt",
+        "compass_heading": 83.5,
+        "altitude": 312.2,
+        "timestamp": "2026-09-30T05:33:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.756271,
+          26.138855
+        ]
+      },
+      "properties": {
+        "id": "f71c11a8-de6a-4df4-9b17-27fd78e9a34e",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 7.7,
+        "blur_score": 247.54,
+        "brightness": 155.31,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Tea gardens, Assam second flush",
+        "compass_heading": 2.9,
+        "altitude": 95.8,
+        "timestamp": "2026-09-30T01:29:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.773035,
+          26.137324
+        ]
+      },
+      "properties": {
+        "id": "6419dd40-c1c9-4ed6-8516-54b3fb370123",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 3.0,
+        "blur_score": 356.01,
+        "brightness": 114.5,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Bamboo grove edge near plantation",
+        "compass_heading": 145.2,
+        "altitude": 97.0,
+        "timestamp": "2026-09-29T23:09:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.584238,
+          12.978349
+        ]
+      },
+      "properties": {
+        "id": "473014d8-f677-4dc0-bbb7-b0f98bebe6cb",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.1,
+        "blur_score": 379.88,
+        "brightness": 145.18,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Arjun_Nair",
+        "notes": "Residential layout, HSR Layout",
+        "compass_heading": 82.4,
+        "altitude": 934.3,
+        "timestamp": "2026-09-28T20:55:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.853969,
+          23.739911
+        ]
+      },
+      "properties": {
+        "id": "87cef360-7853-4a87-aaef-19ba51370ea7",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 5.6,
+        "blur_score": 214.81,
+        "brightness": 130.25,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Arjun_Nair",
+        "notes": "Sparse halophyte scrub",
+        "compass_heading": 62.1,
+        "altitude": 13.2,
+        "timestamp": "2026-09-26T07:10:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.324325,
+          19.733701
+        ]
+      },
+      "properties": {
+        "id": "94197238-4fca-4125-98ef-e2fa0e3268df",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 2.7,
+        "blur_score": 186.89,
+        "brightness": 87.99,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Chilika Lake, brackish water, clear",
+        "compass_heading": 214.2,
+        "altitude": 4.9,
+        "timestamp": "2026-09-26T05:04:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.837875,
+          30.903199
+        ]
+      },
+      "properties": {
+        "id": "300f50d4-b3b6-4223-b763-dd2c42f82014",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 6.9,
+        "blur_score": 118.25,
+        "brightness": 128.85,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Wheat stubble field",
+        "compass_heading": 152.7,
+        "altitude": 260.0,
+        "timestamp": "2026-09-26T01:21:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.840643,
+          30.903091
+        ]
+      },
+      "properties": {
+        "id": "e137ff40-3b68-4453-ade1-594e17a09e2a",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 2.9,
+        "blur_score": 277.02,
+        "brightness": 179.25,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Rabi wheat crop, 45 days old",
+        "compass_heading": 176.4,
+        "altitude": 255.3,
+        "timestamp": "2026-09-25T20:49:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.69625,
+          11.394416
+        ]
+      },
+      "properties": {
+        "id": "2a375069-3cb7-4084-aca9-c307442ba731",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 3.5,
+        "blur_score": 194.17,
+        "brightness": 86.41,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Nilgiri montane forest, misty canopy",
+        "compass_heading": 33.2,
+        "altitude": 2081.7,
+        "timestamp": "2026-09-25T07:27:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.872378,
+          23.737876
+        ]
+      },
+      "properties": {
+        "id": "c154b6ca-ca9d-4865-be58-fbd83a7adb84",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.5,
+        "blur_score": 183.51,
+        "brightness": 154.97,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Rann of Kutch salt flat, white crust",
+        "compass_heading": 275.0,
+        "altitude": 13.8,
+        "timestamp": "2026-09-25T06:42:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.830984,
+          34.091957
+        ]
+      },
+      "properties": {
+        "id": "deaaaca9-c71a-4df9-a8f4-65056ec5573f",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 8.3,
+        "blur_score": 236.09,
+        "brightness": 186.46,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Floating vegetable garden (rad)",
+        "compass_heading": 293.9,
+        "altitude": 1590.8,
+        "timestamp": "2026-09-25T05:26:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.759806,
+          20.936724
+        ]
+      },
+      "properties": {
+        "id": "c71fcef0-8925-4c8e-b4dd-076110631b96",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 7.6,
+        "blur_score": 369.54,
+        "brightness": 80.44,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Soybean crop, Kharif season",
+        "compass_heading": 256.7,
+        "altitude": 332.5,
+        "timestamp": "2026-09-25T01:13:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.825743,
+          34.080961
+        ]
+      },
+      "properties": {
+        "id": "5a8fb62d-bf59-4bb0-b06a-dbaf8bb47d30",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 2.8,
+        "blur_score": 159.42,
+        "brightness": 157.46,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Vikram_Singh",
+        "notes": "Floating vegetable garden (rad)",
+        "compass_heading": 286.7,
+        "altitude": 1588.0,
+        "timestamp": "2026-09-25T00:20:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.681176,
+          11.400331
+        ]
+      },
+      "properties": {
+        "id": "f0a8cd51-f44c-4043-a7ec-fdf61c29b690",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 4.8,
+        "blur_score": 375.21,
+        "brightness": 151.84,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Shola grassland-forest mosaic",
+        "compass_heading": 81.3,
+        "altitude": 2025.6,
+        "timestamp": "2026-09-24T23:45:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.778131,
+          26.131942
+        ]
+      },
+      "properties": {
+        "id": "e6642bcb-0aef-475b-a0fd-7fbadd9246d3",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 4.3,
+        "blur_score": 175.94,
+        "brightness": 171.03,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Bamboo grove edge near plantation",
+        "compass_heading": 331.0,
+        "altitude": 61.4,
+        "timestamp": "2026-09-24T23:09:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.780342,
+          20.935644
+        ]
+      },
+      "properties": {
+        "id": "76e40044-e14b-4d92-89be-2f27ec614a62",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 5.2,
+        "blur_score": 231.24,
+        "brightness": 82.09,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Cotton bolls ready for picking",
+        "compass_heading": 51.0,
+        "altitude": 313.8,
+        "timestamp": "2026-09-24T04:44:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.782702,
+          26.130245
+        ]
+      },
+      "properties": {
+        "id": "4f7c7d7f-f2a2-4786-b38a-6a11b6f918d8",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 7.1,
+        "blur_score": 245.26,
+        "brightness": 75.37,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Tea gardens, Assam second flush",
+        "compass_heading": 41.7,
+        "altitude": 87.1,
+        "timestamp": "2026-09-24T03:27:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.220013,
+          10.514567
+        ]
+      },
+      "properties": {
+        "id": "2e642533-7a33-41cb-abd1-637243e9f1d2",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 4.8,
+        "blur_score": 258.6,
+        "brightness": 88.75,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Sneha_Iyer",
+        "notes": "Teak plantation, 15-yr growth",
+        "compass_heading": 177.2,
+        "altitude": 425.5,
+        "timestamp": "2026-09-23T23:13:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.870182,
+          23.744721
+        ]
+      },
+      "properties": {
+        "id": "2ade7be3-5180-4947-a02f-27b6616a2514",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 5.2,
+        "blur_score": 363.67,
+        "brightness": 89.92,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Rann of Kutch salt flat, white crust",
+        "compass_heading": 224.7,
+        "altitude": 18.6,
+        "timestamp": "2026-09-23T21:49:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.891075,
+          26.912623
+        ]
+      },
+      "properties": {
+        "id": "57ab5340-8ace-46ca-ac27-2b741487c3fc",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.6,
+        "blur_score": 138.94,
+        "brightness": 101.98,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Anjali_Desai",
+        "notes": "Sandy desert, sparse scrub",
+        "compass_heading": 199.5,
+        "altitude": 121.7,
+        "timestamp": "2026-09-23T09:05:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.882876,
+          19.083328
+        ]
+      },
+      "properties": {
+        "id": "9b994462-de44-4035-aab1-0c9fa918d1d9",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 9.0,
+        "blur_score": 146.07,
+        "brightness": 76.95,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Meera_Joshi",
+        "notes": "Slum redevelopment zone",
+        "compass_heading": 219.4,
+        "altitude": 5.3,
+        "timestamp": "2026-09-23T07:38:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.848427,
+          34.080276
+        ]
+      },
+      "properties": {
+        "id": "0105aeba-3a9f-4dd6-b2e2-e5ffd0f99080",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 9.1,
+        "blur_score": 265.86,
+        "brightness": 103.26,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Dal Lake, shikara zone",
+        "compass_heading": 230.3,
+        "altitude": 1582.8,
+        "timestamp": "2026-09-23T07:17:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.216659,
+          28.601338
+        ]
+      },
+      "properties": {
+        "id": "f29e26c3-0d01-4f64-be91-1cc2ce5cf520",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 6.2,
+        "blur_score": 200.78,
+        "brightness": 159.39,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Multi-storey residential, South Delhi",
+        "compass_heading": 251.1,
+        "altitude": 228.8,
+        "timestamp": "2026-09-22T20:57:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.584558,
+          34.155461
+        ]
+      },
+      "properties": {
+        "id": "bd79c7d2-ecf6-4851-af01-476de67e8e28",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 9.2,
+        "blur_score": 213.38,
+        "brightness": 177.45,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Neha_Gupta",
+        "notes": "Cold desert moraine, Ladakh",
+        "compass_heading": 255.9,
+        "altitude": 3715.0,
+        "timestamp": "2026-09-22T06:20:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.870776,
+          19.09092
+        ]
+      },
+      "properties": {
+        "id": "ca68ae77-46c2-4b58-a6e5-76689677cfd7",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 8.1,
+        "blur_score": 333.48,
+        "brightness": 77.94,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Slum redevelopment zone",
+        "compass_heading": 170.6,
+        "altitude": 11.8,
+        "timestamp": "2026-09-22T00:35:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.200161,
+          10.513398
+        ]
+      },
+      "properties": {
+        "id": "b483fb87-8ce8-4e26-a511-a600644f100f",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 8.5,
+        "blur_score": 253.83,
+        "brightness": 173.69,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Vikram_Singh",
+        "notes": "Dense tropical evergreen canopy",
+        "compass_heading": 253.6,
+        "altitude": 206.5,
+        "timestamp": "2026-09-21T22:39:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.865911,
+          23.722343
+        ]
+      },
+      "properties": {
+        "id": "f324a834-6399-452b-bf95-611f176e3d2d",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 7.9,
+        "blur_score": 269.23,
+        "brightness": 167.48,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Aarav_Sharma",
+        "notes": "Sparse halophyte scrub",
+        "compass_heading": 314.5,
+        "altitude": 5.1,
+        "timestamp": "2026-09-21T07:59:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.846888,
+          34.080766
+        ]
+      },
+      "properties": {
+        "id": "1390a088-2d46-41e5-ac5e-398cda5f2f68",
+        "lulc_class": "Water Body",
+        "lulc_class_id": 4,
+        "lulc_class_hi": "जल निकाय",
+        "accuracy_m": 6.7,
+        "blur_score": 315.89,
+        "brightness": 127.43,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Rohan_Patel",
+        "notes": "Floating vegetable garden (rad)",
+        "compass_heading": 222.8,
+        "altitude": 1582.0,
+        "timestamp": "2026-09-21T07:53:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.216332,
+          28.598873
+        ]
+      },
+      "properties": {
+        "id": "9cbc089a-f4f3-4f02-ab27-1029acf4608a",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 6.2,
+        "blur_score": 295.09,
+        "brightness": 184.92,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Commercial market, Connaught Place vicinity",
+        "compass_heading": 54.2,
+        "altitude": 221.5,
+        "timestamp": "2026-09-21T05:39:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.846532,
+          23.738859
+        ]
+      },
+      "properties": {
+        "id": "70f03b8a-a9a7-4c99-8803-9d7d28eef7ce",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 8.5,
+        "blur_score": 273.74,
+        "brightness": 130.63,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Sneha_Iyer",
+        "notes": "Sparse halophyte scrub",
+        "compass_heading": 43.2,
+        "altitude": 14.8,
+        "timestamp": "2026-09-21T02:36:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.842985,
+          30.891542
+        ]
+      },
+      "properties": {
+        "id": "e3d1bed3-57f8-4bc9-99b5-85ea4a85c05b",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 3.6,
+        "blur_score": 323.49,
+        "brightness": 140.24,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Rabi wheat crop, 45 days old",
+        "compass_heading": 343.3,
+        "altitude": 252.7,
+        "timestamp": "2026-09-20T22:31:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571112,
+          34.153728
+        ]
+      },
+      "properties": {
+        "id": "103b9539-ae9c-49b2-a1f8-d3e5e544e561",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 6.6,
+        "blur_score": 320.79,
+        "brightness": 82.46,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Meera_Joshi",
+        "notes": "Cold desert moraine, Ladakh",
+        "compass_heading": 214.3,
+        "altitude": 3734.8,
+        "timestamp": "2026-09-20T09:27:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.589816,
+          34.148382
+        ]
+      },
+      "properties": {
+        "id": "bee43a72-3e21-4475-a9d4-1bd7d201a50b",
+        "lulc_class": "Barren / Fallow",
+        "lulc_class_id": 5,
+        "lulc_class_hi": "बंजर / परती",
+        "accuracy_m": 2.9,
+        "blur_score": 291.22,
+        "brightness": 181.25,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "NSS_Volunteer_Anita",
+        "notes": "Glacial outwash plain, no vegetation",
+        "compass_heading": 349.6,
+        "altitude": 3554.8,
+        "timestamp": "2026-09-20T02:27:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.771445,
+          26.126054
+        ]
+      },
+      "properties": {
+        "id": "ebbb1db4-6f92-4bcc-9204-508d147a03c1",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 4.6,
+        "blur_score": 269.76,
+        "brightness": 86.74,
+        "quality_status": "passed",
+        "verification_status": "pending",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Rice paddy, flooded field",
+        "compass_heading": 56.0,
+        "altitude": 71.5,
+        "timestamp": "2026-09-20T02:07:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.780218,
+          26.145432
+        ]
+      },
+      "properties": {
+        "id": "c848d54c-6265-49e5-b04d-fdeaacb9d35f",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 8.7,
+        "blur_score": 298.59,
+        "brightness": 103.55,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Rice paddy, flooded field",
+        "compass_heading": 121.8,
+        "altitude": 88.7,
+        "timestamp": "2026-09-19T08:05:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.779696,
+          29.516471
+        ]
+      },
+      "properties": {
+        "id": "f71bba9e-6d1d-46b9-afc8-9b849960fbb0",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 6.7,
+        "blur_score": 200.2,
+        "brightness": 96.25,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Riverine grassland with scattered trees",
+        "compass_heading": 48.0,
+        "altitude": 586.2,
+        "timestamp": "2026-09-19T05:42:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.867999,
+          29.97253
+        ]
+      },
+      "properties": {
+        "id": "43a7da57-f1ff-4a87-bfb1-047c5ed2858b",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 9.5,
+        "blur_score": 306.46,
+        "brightness": 76.54,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Sugarcane plantation",
+        "compass_heading": 76.8,
+        "altitude": 242.3,
+        "timestamp": "2026-09-18T22:52:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.881699,
+          19.068088
+        ]
+      },
+      "properties": {
+        "id": "74c1f151-75cd-4056-bcb4-20ec595090b0",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 5.1,
+        "blur_score": 344.64,
+        "brightness": 101.05,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Deepika_Reddy",
+        "notes": "Highrise cluster, Bandra-Kurla Complex",
+        "compass_heading": 132.6,
+        "altitude": 16.8,
+        "timestamp": "2026-09-18T06:52:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.576658,
+          12.961449
+        ]
+      },
+      "properties": {
+        "id": "8a5407c7-ac94-43ca-b779-b444dc4a32a0",
+        "lulc_class": "Urban / Built-up",
+        "lulc_class_id": 3,
+        "lulc_class_hi": "शहरी / निर्माण",
+        "accuracy_m": 3.0,
+        "blur_score": 253.37,
+        "brightness": 151.95,
+        "quality_status": "passed",
+        "verification_status": "rejected",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "IT park campus, Whitefield",
+        "compass_heading": 240.5,
+        "altitude": 930.3,
+        "timestamp": "2026-09-18T03:56:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.676878,
+          11.393755
+        ]
+      },
+      "properties": {
+        "id": "70df9f9f-8195-40ce-b5c2-b925d5c72aa4",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 2.6,
+        "blur_score": 271.64,
+        "brightness": 162.0,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Suresh_Kumar",
+        "notes": "Nilgiri montane forest, misty canopy",
+        "compass_heading": 340.2,
+        "altitude": 2372.2,
+        "timestamp": "2026-09-18T03:20:28Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.772163,
+          29.51939
+        ]
+      },
+      "properties": {
+        "id": "41fe7e11-3693-4e79-8191-b5a5eec1e827",
+        "lulc_class": "Forest",
+        "lulc_class_id": 2,
+        "lulc_class_hi": "वन / हरित आवरण",
+        "accuracy_m": 8.3,
+        "blur_score": 279.82,
+        "brightness": 98.5,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Priya_Verma",
+        "notes": "Riverine grassland with scattered trees",
+        "compass_heading": 125.5,
+        "altitude": 643.8,
+        "timestamp": "2026-09-18T03:13:16Z",
+        "image_filename": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.839542,
+          30.911213
+        ]
+      },
+      "properties": {
+        "id": "01d91796-8803-4eba-b801-79c55832aee6",
+        "lulc_class": "Cropland",
+        "lulc_class_id": 1,
+        "lulc_class_hi": "कृषि भूमि",
+        "accuracy_m": 2.8,
+        "blur_score": 258.65,
+        "brightness": 76.58,
+        "quality_status": "passed",
+        "verification_status": "verified",
+        "surveyor_id": "Karthik_Menon",
+        "notes": "Wheat stubble field",
+        "compass_heading": 320.1,
+        "altitude": 223.6,
+        "timestamp": "2026-09-17T22:38:16Z",
+        "image_filename": null
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-10-18T16:03:12.244687+00:00",
+    "total_features": 102,
+    "source": "Bhu-Drishti Citizen Science Portal",
+    "standard": "OGC GeoJSON / ISRO Bhuvan LULC Level-1"
+  }
+}

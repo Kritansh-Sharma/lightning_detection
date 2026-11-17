@@ -1,0 +1,134 @@
+[
+  {
+    "caption": "A paddy field in Majuli, Assam",
+    "region": "Majuli, Assam",
+    "latitude": 26.941272,
+    "longitude": 94.264072,
+    "image": "/static/showcase-farms/farm-01-ee4262ab.jpg",
+    "creator": "Joli Rumi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:A_paddy_field_in_Majuli,_Assam.jpg"
+  },
+  {
+    "caption": "Aerial view of agricultural fields in Punjab",
+    "region": "Punjab, India",
+    "latitude": 29.5,
+    "longitude": 73.916667,
+    "image": "/static/showcase-farms/farm-02-5a717cf9.jpg",
+    "creator": "Bhullargraphic",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_agricultural_fields_in_Punjab,_India.jpg"
+  },
+  {
+    "caption": "Green paddy field at the growing stage",
+    "region": "Telangana, India",
+    "latitude": 16.788979,
+    "longitude": 79.597389,
+    "image": "/static/showcase-farms/farm-03-9a758702.jpg",
+    "creator": "Harsha099",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Green_Paddy_Field_at_growing_stage.jpg"
+  },
+  {
+    "caption": "Paddy stubble near Balamuri, Coorg",
+    "region": "Karnataka, India",
+    "latitude": 12.2826,
+    "longitude": 75.713993,
+    "image": "/static/showcase-farms/farm-04-10fa67da.jpg",
+    "creator": "Timothy A. Gonsalves",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Paddy_Field_Stubble_Balamuri_Coorg_Feb24_A7C_09450.jpg"
+  },
+  {
+    "caption": "Paddy field in Tamil Nadu",
+    "region": "Tamil Nadu, India",
+    "latitude": 9.395478,
+    "longitude": 77.461375,
+    "image": "/static/showcase-farms/farm-05-3f4f7eec.jpg",
+    "creator": "Jperiapandi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Paddy_field_in_Tamil_Nadu_India.jpg"
+  },
+  {
+    "caption": "Paddy field in a village landscape",
+    "region": "Assam, India",
+    "latitude": 26.364279,
+    "longitude": 92.800859,
+    "image": "/static/showcase-farms/farm-06-3d744390.jpg",
+    "creator": "Indranil Gayan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Paddy_field_of_village_area.jpg"
+  },
+  {
+    "caption": "Ploughing a paddy field with oxen",
+    "region": "Umaria district, Madhya Pradesh",
+    "latitude": 23.636809,
+    "longitude": 81.168548,
+    "image": "/static/showcase-farms/farm-07-ac5e6def.jpg",
+    "creator": "Yann",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ploughing_paddy_field_with_oxen,_Umaria_district,_MP,_India.jpg"
+  },
+  {
+    "caption": "Rice fields near Dasarathpur",
+    "region": "Odisha, India",
+    "latitude": 20.838384,
+    "longitude": 86.448318,
+    "image": "/static/showcase-farms/farm-08-64de729c.jpg",
+    "creator": "Deepak das",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rice_field_near_Chitrakoot_College_-_panoramio.jpg"
+  },
+  {
+    "caption": "Rice fields in rural India",
+    "region": "India",
+    "latitude": 15.002218,
+    "longitude": 75.054461,
+    "image": "/static/showcase-farms/farm-09-e8e18676.jpg",
+    "creator": "Phil Bus",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rice_fields_in_rural_India.jpg"
+  },
+  {
+    "caption": "Rice fields near Darbhanga, Bihar",
+    "region": "Darbhanga, Bihar",
+    "latitude": 26.21309,
+    "longitude": 86.047174,
+    "image": "/static/showcase-farms/farm-10-f762db7d.jpg",
+    "creator": "Suyash.dwivedi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rice_fields_near_Darbhanga,_Bihar_2.jpg"
+  },
+  {
+    "caption": "Rice fields of Kerala",
+    "region": "Kerala, India",
+    "latitude": 10.81595,
+    "longitude": 76.14439,
+    "image": "/static/showcase-farms/farm-11-46f47dae.jpg",
+    "creator": "Suresh Babunair",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Rice_fields_of_kerala,India_-_panoramio.jpg"
+  },
+  {
+    "caption": "Paddy fields near Eluru",
+    "region": "Andhra Pradesh, India",
+    "latitude": 16.718367,
+    "longitude": 81.161573,
+    "image": "/static/showcase-farms/farm-12-21a4d2d2.jpg",
+    "creator": "iMahesh",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sunrise_on_paddy_fields_near_Eluru_(4).jpg"
+  }
+]

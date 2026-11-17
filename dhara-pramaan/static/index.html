@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bhu-Drishti is a citizen ground-truth portal for field data collection, land-use and land-cover validation, and geospatial data export.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#F2F2F7" id="browser-theme-color">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bhu-Drishti | Ground-Truth Portal">
+    <meta property="og:description" content="Citizen-powered field data collection and land-use and land-cover validation.">
+    <title>Bhu-Drishti — Ground-Truth Portal</title>
+    <script>
+        try {
+            if (localStorage.getItem('dp_color_theme') === 'dark') {
+                document.documentElement.dataset.theme = 'dark';
+            }
+        } catch (error) {
+            console.warn('Saved color theme could not be read:', error);
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     TRICOLOR STRIPE
+     ══════════════════════════════════════════════ -->
+<div class="tricolor">
+    <div class="tri-saffron"></div>
+    <div class="tri-white"></div>
+    <div class="tri-green"></div>
+</div>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ══════════════════════════════════════════════
+     LOGIN PAGE
+     ══════════════════════════════════════════════ -->
+
+<!-- Simulated SMS Push Notification Banner -->
+<div id="sms-notification-popup" class="sms-popup" style="display:none">
+    <svg class="sms-icon icon" aria-hidden="true"><use href="icons.svg#icon-message"></use></svg>
+    <div class="sms-content">
+        <div class="sms-sender">SMS &bull; ISRO-BHU-DRISHTI &bull; GOVT OF INDIA</div>
+        <div class="sms-body" id="sms-body-text">Your Bhu-Drishti verification OTP is <strong>582914</strong>. Valid for 10 minutes. Do not share.</div>
+    </div>
+    <button class="sms-close" onclick="closeSmsPopup()">&times;</button>
+</div>
+
+<main id="main-content">
+<div id="login-page" class="page active">
+    <div class="login-wrapper">
+        <button class="theme-toggle login-theme-toggle" type="button" onclick="toggleColorTheme()" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="icon theme-icon-moon" aria-hidden="true"><use href="icons.svg#icon-moon"></use></svg>
+            <svg class="icon theme-icon-sun" aria-hidden="true"><use href="icons.svg#icon-sun"></use></svg>
+        </button>
+        <div class="login-header">
+            <div class="gov-brand">
+                <svg class="gov-emblem icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg>
+                <div>
+                    <div class="gov-title-hi">भारत सरकार &nbsp;|&nbsp; अंतरिक्ष विभाग</div>
+                    <div class="gov-title-en">Government of India &nbsp;|&nbsp; Department of Space</div>
+                </div>
+            </div>
+            <h1 class="project-title">Bhu-Drishti</h1>
+            <p class="project-sub">National Citizen Ground-Truth Portal for Satellite LULC AI</p>
+            <p class="project-tagline">Verifying Orbit with Ground Truth — Citizen-Powered Field Verification</p>
+        </div>
+
+        <div class="login-card">
+            <h2><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-lock"></use></svg> Portal Login via OTP</h2>
+            <p class="login-label">Select your role and verify via mobile OTP:</p>
+
+            <div class="role-selector">
+                <label class="role-card selected" data-role="farmer">
+                    <input type="radio" name="role" value="farmer" checked>
+                    <svg class="role-icon icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg>
+                    <span class="role-name">Farmer / Citizen Surveyor<br><small>किसान / क्षेत्रीय सर्वेक्षक</small></span>
+                </label>
+                <label class="role-card" data-role="analyst">
+                    <input type="radio" name="role" value="analyst">
+                    <svg class="role-icon icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg>
+                    <span class="role-name">ISRO / NRSC GIS Analyst<br><small>भू-सत्यापन विश्लेषक</small></span>
+                </label>
+                <label class="role-card" data-role="admin">
+                    <input type="radio" name="role" value="admin">
+                    <svg class="role-icon icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg>
+                    <span class="role-name">Admin / Nodal Officer<br><small>प्रशासनिक अधिकारी</small></span>
+                </label>
+            </div>
+
+            <!-- STEP 1: Enter Mobile Number -->
+            <div id="login-step-phone" class="login-fields">
+                <div class="input-prefix-wrap">
+                    <span class="input-prefix">+91</span>
+                    <input type="tel" id="login-phone" placeholder="Enter 10-digit Mobile Number" maxlength="10" autocomplete="tel">
+                </div>
+                <button class="btn btn-primary btn-block" id="btn-send-otp" onclick="requestOTP()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-message"></use></svg> Send OTP via SMS</button>
+            </div>
+
+            <!-- STEP 2: Enter OTP (Reveals when OTP is requested) -->
+            <div id="login-step-otp" class="login-fields" style="display:none">
+                <div class="otp-notice">
+                    <span>SMS sent to <strong id="otp-phone-display">+91 98765 43210</strong></span>
+                    <a href="javascript:void(0)" onclick="editPhoneNumber()" class="edit-link">Edit</a>
+                </div>
+                <input type="text" id="login-otp-code" placeholder="Enter 6-digit OTP (e.g. 123456)" maxlength="6" class="otp-input">
+                <div class="otp-timer-row">
+                    <span id="otp-countdown">Resend OTP in <strong>45s</strong></span>
+                    <button class="btn-link" id="btn-resend-otp" onclick="requestOTP()" style="display:none">Resend OTP</button>
+                </div>
+                <button class="btn btn-success btn-block" onclick="verifyOTPAndLogin()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg> Verify OTP & Enter Portal</button>
+            </div>
+
+            <div class="demo-divider"><span>DEMO SAMPLE PROFILES</span></div>
+            <div class="demo-buttons">
+                <button class="btn btn-success" onclick="demoLogin('farmer')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg><span>Ramesh Yadav<small>(Farmer)</small></span></button>
+                <button class="btn btn-info" onclick="demoLogin('analyst')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg><span>Dr. Ananya Rao<small>(GIS Analyst)</small></span></button>
+                <button class="btn btn-warning" onclick="demoLogin('admin')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg><span>Meera Kulkarni<small>(District Nodal Officer)</small></span></button>
+            </div>
+            <p class="demo-note">Illustrative profiles for demonstration only.</p>
+        </div>
+
+        <div class="login-footer">
+            <p>ORBITRON Space Technology Hackathon &nbsp;|&nbsp; PS-24 &nbsp;|&nbsp; Domain 6</p>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     MAIN DASHBOARD
+     ══════════════════════════════════════════════ -->
+<div id="dashboard" class="page">
+
+    <!-- Header -->
+    <header class="dash-header">
+        <div class="dash-brand">
+            <svg class="dash-emblem icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg>
+            <div>
+                <div class="dash-title">Bhu-Drishti</div>
+                <div class="dash-subtitle">National Ground-Truth Validation Portal</div>
+            </div>
+        </div>
+        <div class="dash-status">
+            <span class="status-pill online" id="sync-status">Online</span>
+            <span class="status-pill" id="gps-status-pill">GPS: Waiting</span>
+            <span class="status-pill" id="cache-status">Cached: 0</span>
+        </div>
+        <div class="dash-user">
+            <span id="user-name">Ramesh Yadav (Farmer / Field Surveyor)</span>
+            <button class="theme-toggle" id="theme-toggle" type="button" onclick="toggleColorTheme()" aria-label="Switch to dark mode" title="Switch to dark mode">
+                <svg class="icon theme-icon-moon" aria-hidden="true"><use href="icons.svg#icon-moon"></use></svg>
+                <svg class="icon theme-icon-sun" aria-hidden="true"><use href="icons.svg#icon-sun"></use></svg>
+            </button>
+            <span class="role-badge" id="user-role-badge">Farmer</span>
+            <button class="btn btn-sm btn-logout" onclick="handleLogout()">Log out</button>
+        </div>
+    </header>
+
+    <!-- Tab Nav with Role-Based IDs -->
+    <nav class="tab-nav" aria-label="Main sections">
+        <button class="tab-btn active" id="tab-btn-field" data-tab="field" onclick="switchTab('field')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg> Field Survey<br><small>क्षेत्रीय सर्वेक्षण</small></button>
+        <button class="tab-btn" id="tab-btn-rewards" data-tab="rewards" onclick="switchTab('rewards')" style="display:none"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-award"></use></svg> Field Journey<br><small>Rewards & badges</small></button>
+        <button class="tab-btn" id="tab-btn-map" data-tab="map" onclick="switchTab('map')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map"></use></svg> GIS Map<br><small>भू-सत्यापन मानचित्र</small></button>
+        <button class="tab-btn" id="tab-btn-export" data-tab="export" onclick="switchTab('export')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-database"></use></svg> ISRO Export<br><small>डेटा निष्कर्षण</small></button>
+        <button class="tab-btn" id="tab-btn-analytics" data-tab="analytics" onclick="switchTab('analytics')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-chart"></use></svg> Analytics<br><small>राष्ट्रीय विश्लेषण</small></button>
+        <button class="tab-btn" id="tab-btn-guidelines" data-tab="guidelines" onclick="switchTab('guidelines')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-book"></use></svg> <span id="guidelines-tab-label">Guidelines</span><br><small id="guidelines-tab-subtitle">दिशानिर्देश</small></button>
+    </nav>
+
+    <!-- KPI Ribbon -->
+    <div class="kpi-ribbon" id="kpi-ribbon">
+        <div class="kpi-card">
+            <svg class="kpi-icon icon" aria-hidden="true"><use href="icons.svg#icon-pin"></use></svg>
+            <div class="kpi-value" id="kpi-total">—</div>
+            <div class="kpi-label">Total Points</div>
+        </div>
+        <div class="kpi-card">
+            <svg class="kpi-icon icon" aria-hidden="true"><use href="icons.svg#icon-check-circle"></use></svg>
+            <div class="kpi-value" id="kpi-verified">—</div>
+            <div class="kpi-label">Verified for AI</div>
+        </div>
+        <div class="kpi-card">
+            <svg class="kpi-icon icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg>
+            <div class="kpi-value" id="kpi-accuracy">—</div>
+            <div class="kpi-label">Mean GPS Accuracy</div>
+        </div>
+        <div class="kpi-card">
+            <svg class="kpi-icon icon" aria-hidden="true"><use href="icons.svg#icon-users"></use></svg>
+            <div class="kpi-value" id="kpi-surveyors">—</div>
+            <div class="kpi-label">Unique Surveyors</div>
+        </div>
+    </div>
+
+    <!-- ═══════ TAB 1: FIELD SURVEY ═══════ -->
+    <div id="tab-field" class="tab-content active">
+        <div class="field-grid">
+            <!-- LEFT: Camera & Quality -->
+            <div class="field-col">
+                <div class="card">
+                    <div class="card-header">
+                        <span><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-camera"></use></svg> Live Camera & Terrain View</span>
+                        <span class="header-badge" id="camera-role-tag">Field Mode</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="camera-box">
+                            <video id="camera-video" autoplay playsinline></video>
+                            <canvas id="camera-canvas" style="display:none"></canvas>
+                            <img id="camera-preview" style="display:none" alt="Captured frame">
+                            <!-- Rule-of-Thirds Grid Overlay -->
+                            <div id="camera-grid-overlay" class="camera-grid" style="display:none">
+                                <div class="grid-line h1"></div>
+                                <div class="grid-line h2"></div>
+                                <div class="grid-line v1"></div>
+                                <div class="grid-line v2"></div>
+                            </div>
+                            <!-- Live Watermark Overlay -->
+                            <div id="camera-watermark" class="camera-watermark" style="display:none">
+                                <span id="wm-coords">Waiting for GPS</span> &bull; <span id="wm-time">Capture time pending</span> &bull; <span>Bhu-Drishti</span>
+                            </div>
+                        </div>
+                        <div class="camera-controls">
+                            <button class="btn btn-primary" id="btn-capture" onclick="captureFrame()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-camera"></use></svg> Capture Frame</button>
+                            <button class="btn btn-outline" id="btn-retake" onclick="retakePhoto()" style="display:none"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-refresh"></use></svg> Retake</button>
+                            <button class="btn btn-sm btn-outline" id="btn-toggle-grid" onclick="toggleCameraGrid()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-grid"></use></svg> Grid</button>
+                            <button class="btn btn-sm btn-outline" id="btn-toggle-watermark" onclick="toggleWatermark()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-tag"></use></svg> Watermark</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card photo-upload-card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-image"></use></svg> Add a Field Photo</div>
+                    <div class="card-body">
+                        <input type="file" id="photo-upload-input" class="visually-hidden" accept="image/jpeg,image/png,image/webp">
+                        <label class="photo-dropzone" id="photo-dropzone" for="photo-upload-input" tabindex="0">
+                            <svg class="photo-upload-icon icon" aria-hidden="true"><use href="icons.svg#icon-image"></use></svg>
+                            <span class="photo-dropzone-copy"><strong>Choose a field photo</strong><small>Browse this device or drag a JPG, PNG, or WebP here</small></span>
+                            <span class="photo-browse-btn">Browse photos</span>
+                        </label>
+                        <div class="photo-selection" id="photo-selection" hidden>
+                            <img class="photo-thumbnail" id="photo-thumbnail" alt="Selected field photo preview">
+                            <div class="photo-metadata">
+                                <strong id="photo-file-name"></strong>
+                                <span id="photo-dimensions">Reading image dimensions…</span>
+                                <span id="photo-file-size"></span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline" id="photo-remove" aria-label="Remove selected field photo">Remove</button>
+                        </div>
+                        <p class="photo-measure-note"><strong>About field size:</strong> Photo resolution is measured in pixels, not metres. A single ground-level photo cannot reliably reveal a farm’s real-world dimensions. Area measurement needs a mapped boundary or a calibrated overhead image.</p>
+                    </div>
+                </div>
+
+                <div class="card" id="quality-panel" style="display:none">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-pulse"></use></svg> Edge Quality Gate</div>
+                    <div class="card-body">
+                        <div class="quality-row">
+                            <span>Blur Score (Laplacian):</span>
+                            <span id="q-blur-val" class="quality-val">—</span>
+                            <span id="q-blur-badge" class="badge">—</span>
+                        </div>
+                        <div class="quality-row">
+                            <span>Brightness Index:</span>
+                            <span id="q-bright-val" class="quality-val">—</span>
+                            <span id="q-bright-badge" class="badge">—</span>
+                        </div>
+                        <div id="q-overall" class="quality-overall"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: GPS & Class Selector -->
+            <div class="field-col">
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-location"></use></svg> GPS Geolocation Sensor</div>
+                    <div class="card-body">
+                        <div class="gps-grid">
+                            <div class="gps-field"><span class="gps-label">Latitude:</span><span id="gps-lat" class="gps-value">—</span></div>
+                            <div class="gps-field"><span class="gps-label">Longitude:</span><span id="gps-lon" class="gps-value">—</span></div>
+                            <div class="gps-field"><span class="gps-label">Accuracy:</span><span id="gps-acc" class="gps-value">—</span></div>
+                            <div class="gps-field"><span class="gps-label">Altitude:</span><span id="gps-alt" class="gps-value">—</span></div>
+                        </div>
+                        <div id="gps-badge" class="gps-accuracy-badge">Waiting for GPS lock…</div>
+                        <div class="photo-gps-control">
+                            <button type="button" class="btn btn-outline btn-block" id="btn-refresh-photo-gps" onclick="refreshPhotoGPS()">
+                                <svg class="icon" aria-hidden="true"><use href="icons.svg#icon-pin"></use></svg>
+                                Refresh GPS for this photo
+                            </button>
+                            <p id="photo-gps-status" class="photo-gps-status" aria-live="polite">Select a photo, then refresh to link a fresh device location to it.</p>
+                            <small>Uses this device's location services; the reported accuracy is an estimate, not a parcel survey.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-map"></use></svg> Select LULC Category (Bhuvan Level-1)</div>
+                    <div class="card-body">
+                        <div class="lulc-grid" id="lulc-grid">
+                            <div class="lulc-card" data-id="1" onclick="selectLULC(1)" style="--lulc-color:#A3B86B">
+                                <svg class="lulc-emoji icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg>
+                                <span class="lulc-name">Cropland<br><small>कृषि भूमि</small></span>
+                            </div>
+                            <div class="lulc-card" data-id="2" onclick="selectLULC(2)" style="--lulc-color:#426B57">
+                                <svg class="lulc-emoji icon" aria-hidden="true"><use href="icons.svg#icon-forest"></use></svg>
+                                <span class="lulc-name">Forest<br><small>वन / हरित आवरण</small></span>
+                            </div>
+                            <div class="lulc-card" data-id="3" onclick="selectLULC(3)" style="--lulc-color:#7B8188">
+                                <svg class="lulc-emoji icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg>
+                                <span class="lulc-name">Urban<br><small>शहरी / निर्माण</small></span>
+                            </div>
+                            <div class="lulc-card" data-id="4" onclick="selectLULC(4)" style="--lulc-color:#6796A3">
+                                <svg class="lulc-emoji icon" aria-hidden="true"><use href="icons.svg#icon-water"></use></svg>
+                                <span class="lulc-name">Water Body<br><small>जल निकाय</small></span>
+                            </div>
+                            <div class="lulc-card" data-id="5" onclick="selectLULC(5)" style="--lulc-color:#B98754">
+                                <svg class="lulc-emoji icon" aria-hidden="true"><use href="icons.svg#icon-land"></use></svg>
+                                <span class="lulc-name">Barren<br><small>बंजर / परती</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FARMER-SPECIFIC CROP ATTRIBUTES (Visible to Farmers) -->
+                <div class="card" id="farmer-params-card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg> Crop & Seasonal Attributes (कृषि विवरण)</div>
+                    <div class="card-body">
+                        <label class="param-title">Crop Season (मौसम):</label>
+                        <div class="chip-group" id="crop-season-group">
+                            <button type="button" class="chip active" data-val="Kharif" onclick="selectChip(this, 'crop-season')">Kharif (खरीफ)</button>
+                            <button type="button" class="chip" data-val="Rabi" onclick="selectChip(this, 'crop-season')">Rabi (रबी)</button>
+                            <button type="button" class="chip" data-val="Zaid" onclick="selectChip(this, 'crop-season')">Zaid (जायद)</button>
+                        </div>
+                        <label class="param-title" style="margin-top:10px">Crop Growth Stage (फसल अवस्था):</label>
+                        <div class="chip-group" id="crop-stage-group">
+                            <button type="button" class="chip active" data-val="Vegetative" onclick="selectChip(this, 'crop-stage')">Vegetative (वृद्धि)</button>
+                            <button type="button" class="chip" data-val="Flowering" onclick="selectChip(this, 'crop-stage')">Flowering (फूल)</button>
+                            <button type="button" class="chip" data-val="Harvested" onclick="selectChip(this, 'crop-stage')">Harvested Stubble (कटाई)</button>
+                        </div>
+                        <label class="param-title" style="margin-top:10px">Irrigation Mode (सिंचाई साधन):</label>
+                        <div class="chip-group" id="irrigation-group">
+                            <button type="button" class="chip active" data-val="Rainfed" onclick="selectChip(this, 'irrigation')">Rainfed (वर्षा)</button>
+                            <button type="button" class="chip" data-val="Canal" onclick="selectChip(this, 'irrigation')">Canal (नहर)</button>
+                            <button type="button" class="chip" data-val="Tubewell" onclick="selectChip(this, 'irrigation')">Tubewell (नलकूप)</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANALYST-SPECIFIC AUDIT ATTRIBUTES (Visible to Analysts) -->
+                <div class="card" id="analyst-params-card" style="display:none">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg> Remote Sensing Calibration Attributes</div>
+                    <div class="card-body">
+                        <label class="param-title">Target Earth Observation Sensor:</label>
+                        <select id="analyst-sensor-select" class="form-input">
+                            <option value="Sentinel-2">ESA Sentinel-2 (10m Multispectral)</option>
+                            <option value="Resourcesat-2A">ISRO Resourcesat-2A LISS-IV (5.8m)</option>
+                            <option value="Cartosat-3">ISRO Cartosat-3 (High Resolution)</option>
+                        </select>
+                        <label class="param-title" style="margin-top:10px">Parcel Homogeneity:</label>
+                        <div class="chip-group" id="parcel-homo-group">
+                            <button type="button" class="chip active" data-val="Homogeneous" onclick="selectChip(this, 'parcel-homo')">Uniform Parcel (&gt;90%)</button>
+                            <button type="button" class="chip" data-val="Mixed" onclick="selectChip(this, 'parcel-homo')">Mixed Transition Boundary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <textarea id="field-notes" class="form-input" rows="2" placeholder="Survey notes (e.g., crop type, soil moisture, building type…)"></textarea>
+                        <div class="submit-row">
+                            <button class="btn btn-success btn-block" onclick="submitGroundTruth()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg> Submit Ground Truth</button>
+                            <button class="btn btn-outline btn-block" onclick="saveOffline()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-database"></use></svg> Save Offline</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════ TAB 2: GIS MAP ═══════ -->
+    <div id="tab-map" class="tab-content">
+        <div class="map-layout">
+            <div class="map-sidebar">
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-filter"></use></svg> Filter & Controls</div>
+                    <div class="card-body">
+                        <label class="filter-label">LULC Class:</label>
+                        <div class="filter-checks" id="map-class-filters">
+                            <label><input type="checkbox" value="1" checked onchange="reloadMapMarkers()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-crop"></use></svg> Cropland</label>
+                            <label><input type="checkbox" value="2" checked onchange="reloadMapMarkers()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-forest"></use></svg> Forest</label>
+                            <label><input type="checkbox" value="3" checked onchange="reloadMapMarkers()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-building"></use></svg> Urban</label>
+                            <label><input type="checkbox" value="4" checked onchange="reloadMapMarkers()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-water"></use></svg> Water</label>
+                            <label><input type="checkbox" value="5" checked onchange="reloadMapMarkers()"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-land"></use></svg> Barren</label>
+                        </div>
+                        <label class="filter-label">Status:</label>
+                        <select id="map-status-filter" class="form-input" onchange="reloadMapMarkers()">
+                            <option value="">All</option>
+                            <option value="verified">Verified</option>
+                            <option value="pending">Pending</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <div class="filter-checks map-demo-filter">
+                            <label>
+                                <input type="checkbox" id="map-demo-points-toggle" onchange="reloadMapMarkers()">
+                                <span class="map-demo-key" aria-hidden="true"></span>
+                                Show synthetic demo points
+                            </label>
+                            <small>Off by default; these have no uploaded photo and do not show your device location.</small>
+                        </div>
+                        <div class="showcase-map-control">
+                            <label>
+                                <input type="checkbox" id="showcase-map-toggle" checked onchange="toggleShowcaseMarkers()">
+                                <span class="showcase-map-key" aria-hidden="true"></span>
+                                Farm photo showcase
+                            </label>
+                            <small>12 licensed reference photos · photo GPS only, not parcel boundaries or survey data</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="inspector-card" style="display:none">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-clipboard"></use></svg> Point Inspector</div>
+                    <div class="card-body">
+                        <img id="insp-photo" class="insp-photo" alt="Ground photo">
+                        <div class="insp-detail"><strong>ID:</strong> <span id="insp-id"></span></div>
+                        <div class="insp-detail"><strong>Class:</strong> <span id="insp-class"></span></div>
+                        <div class="insp-detail"><strong>Coords:</strong> <span id="insp-coords"></span></div>
+                        <div class="insp-detail"><strong>Accuracy:</strong> <span id="insp-acc"></span></div>
+                        <div class="insp-detail"><strong>Blur:</strong> <span id="insp-blur"></span></div>
+                        <div class="insp-detail"><strong>Status:</strong> <span id="insp-status"></span></div>
+                        <div class="insp-detail"><strong>Surveyor:</strong> <span id="insp-surveyor"></span></div>
+                        <div class="insp-detail"><strong>Notes:</strong> <span id="insp-notes"></span></div>
+                        <div class="insp-detail"><strong>Time:</strong> <span id="insp-time"></span></div>
+                        <div class="insp-actions" id="insp-actions">
+                            <button class="btn btn-success btn-sm" onclick="verifyPoint('verified')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-check"></use></svg> Approve</button>
+                            <button class="btn btn-danger btn-sm" onclick="verifyPoint('rejected')"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-close-circle"></use></svg> Reject</button>
+                            <button class="btn btn-danger btn-sm" id="insp-delete" onclick="deletePoint()" style="display:none"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-trash"></use></svg> Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <div id="gis-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════ TAB 3: ISRO EXPORT ═══════ -->
+    <div id="tab-export" class="tab-content">
+        <div class="export-grid">
+            <div class="card export-card">
+                <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-database"></use></svg> OGC GeoJSON Export</div>
+                <div class="card-body">
+                    <svg class="export-icon icon" aria-hidden="true"><use href="icons.svg#icon-map"></use></svg>
+                    <p><strong>Format:</strong> GeoJSON FeatureCollection</p>
+                    <p><strong>Projection:</strong> WGS84 EPSG:4326</p>
+                    <p><strong>Compatible:</strong> QGIS, GeoPandas, PyTorch</p>
+                    <button class="btn btn-primary btn-block" onclick="downloadExport('geojson')">Download GeoJSON</button>
+                </div>
+            </div>
+            <div class="card export-card">
+                <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-chart"></use></svg> Bhuvan CSV Catalog</div>
+                <div class="card-body">
+                    <svg class="export-icon icon" aria-hidden="true"><use href="icons.svg#icon-clipboard"></use></svg>
+                    <p><strong>Format:</strong> RFC 4180 CSV</p>
+                    <p><strong>Schema:</strong> ISRO Bhuvan LULC Level-1</p>
+                    <p><strong>Compatible:</strong> Excel, R, Pandas</p>
+                    <button class="btn btn-primary btn-block" onclick="downloadExport('csv')">Download CSV</button>
+                </div>
+            </div>
+            <div class="card export-card">
+                <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-database"></use></svg> STAC Metadata</div>
+                <div class="card-body">
+                    <svg class="export-icon icon" aria-hidden="true"><use href="icons.svg#icon-satellite"></use></svg>
+                    <p><strong>Format:</strong> STAC Catalog JSON</p>
+                    <p><strong>Standard:</strong> OGC / Radiant Earth</p>
+                    <p><strong>For:</strong> ML Pipeline Integration</p>
+                    <button class="btn btn-info btn-block" onclick="loadSTAC()">View STAC JSON</button>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="stac-viewer" style="display:none">
+            <div class="card-header">STAC Catalog Metadata</div>
+            <div class="card-body"><pre id="stac-json" class="code-block"></pre></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-clipboard"></use></svg> Export Data Preview (Latest 10 Records)</div>
+            <div class="card-body table-wrap">
+                <table class="data-table" id="export-preview-table">
+                    <thead>
+                        <tr><th>ID</th><th>Lat</th><th>Lon</th><th>Class</th><th>Accuracy</th><th>Blur</th><th>Status</th><th>Time</th></tr>
+                    </thead>
+                    <tbody id="export-preview-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════ TAB 4: ANALYTICS ═══════ -->
+    <div id="tab-analytics" class="tab-content">
+        <div class="analytics-grid">
+            <div class="analytics-left">
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-chart"></use></svg> LULC Class Distribution</div>
+                    <div class="card-body" id="chart-class-dist"></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-clipboard"></use></svg> Verification Status Breakdown</div>
+                    <div class="card-body" id="chart-status-dist"></div>
+                </div>
+            </div>
+            <div class="analytics-right">
+                <div class="card">
+                    <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-award"></use></svg> Top Surveyors Leaderboard</div>
+                    <div class="card-body table-wrap">
+                        <table class="data-table" id="leaderboard-table">
+                            <thead><tr><th>#</th><th>Surveyor</th><th>Points</th></tr></thead>
+                            <tbody id="leaderboard-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Farmer-only RPG-style progress and daily field challenge -->
+    <div id="tab-rewards" class="tab-content">
+        <div class="rewards-wrap">
+            <section class="rewards-hero" aria-labelledby="rewards-title">
+                <div class="rewards-hero-copy">
+                    <span class="rewards-kicker">YOUR FIELD JOURNEY</span>
+                    <h1 id="rewards-title">Every verified observation moves the map forward.</h1>
+                    <p>Build your field reputation by sharing useful land-cover photos and completing short learning challenges.</p>
+                </div>
+                <div class="rewards-scene">
+                    <span class="scene-speech" aria-hidden="true">Ready for your next field quest?</span>
+                    <div class="field-adventure-scout" role="img" aria-label="Viking field scout walking with an axe"></div>
+                    <span class="scene-caption" aria-hidden="true">FIELD SCOUT · LEVEL UP AS YOU GO</span>
+                </div>
+                <div class="rewards-level" aria-live="polite">
+                    <span class="rewards-level-label">FIELD RANK</span>
+                    <strong id="reward-level">Level 1</strong>
+                    <span id="reward-level-progress-label">0 / 100 XP to next level</span>
+                    <div class="reward-progress-track" id="reward-level-progress" role="progressbar" aria-label="Progress to next field rank" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <span id="reward-level-progress-fill"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reward-stats" aria-label="Your contribution totals">
+                <article class="reward-stat"><span>Field notes</span><strong id="reward-submissions">0</strong><small>Photo-backed submissions</small></article>
+                <article class="reward-stat"><span>Accepted</span><strong id="reward-accepted">0</strong><small>Reviewed and verified</small></article>
+                <article class="reward-stat reward-stat-points"><span>Journey points</span><strong id="reward-points">0</strong><small>XP earned so far</small></article>
+            </section>
+
+            <section class="card rewards-card">
+                <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-award"></use></svg> Milestone badges</div>
+                <div class="card-body">
+                    <p class="rewards-section-intro">Earn a badge by contributing real, photo-backed field data. Pending or rejected photos do not count as accepted.</p>
+                    <div class="reward-badges" id="reward-badges" aria-live="polite"></div>
+                </div>
+            </section>
+
+            <section class="card rewards-card challenge-card">
+                <div class="card-header"><svg class="icon" aria-hidden="true"><use href="icons.svg#icon-book"></use></svg> Daily field-scout challenge <span class="challenge-xp">+5 points</span></div>
+                <div class="card-body">
+                    <p class="challenge-question">Which photo is most useful for documenting a cropland observation?</p>
+                    <fieldset class="challenge-options" id="field-quiz-options">
+                        <legend class="visually-hidden">Choose the most useful cropland photo</legend>
+                        <label><input type="radio" name="field-quiz" value="crop-rows"> Clear crop rows with visible soil or vegetation</label>
+                        <label><input type="radio" name="field-quiz" value="portrait"> A close-up portrait of the person taking the photo</label>
+                        <label><input type="radio" name="field-quiz" value="sky"> A photo mostly showing the sky</label>
+                    </fieldset>
+                    <div class="challenge-footer">
+                        <button class="btn btn-primary" id="field-quiz-submit" type="button" onclick="submitFieldQuiz()">Answer today's challenge</button>
+                        <p class="challenge-feedback" id="field-quiz-feedback" role="status" aria-live="polite">One attempt per day. Correct answers earn 5 points; learning is the main reward.</p>
+                    </div>
+                </div>
+            </section>
+            <p class="rewards-disclaimer">Points and badges are project participation rewards, not cash or guaranteed redeemable services. Any future benefits depend on formally confirmed partners.</p>
+        </div>
+    </div>
+
+    <!-- ═══════ TAB 5: GUIDELINES ═══════ -->
+    <div id="tab-guidelines" class="tab-content">
+        <div class="guidelines-container">
+            <div class="guidelines-language">
+                <label for="guidelines-language-select" id="guidelines-language-label">Guideline language</label>
+                <select id="guidelines-language-select" aria-controls="guidelines-content">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="as">অসমীয়া</option>
+                </select>
+            </div>
+            <div id="guidelines-content" aria-live="polite"></div>
+        </div>
+    </div>
+
+</div><!-- /dashboard -->
+</main>
+
+<!-- Toast Notification -->
+<div id="toast-container"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
